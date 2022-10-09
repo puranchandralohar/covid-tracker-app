@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 /* Header */
 header{
     height: 400px;
@@ -32,9 +33,13 @@ header{
     text-align: center;
 }
 
-.data_heading{
-    margin:3rem 0;
+.data{
     padding: 1.2rem;
+}
+
+.data_heading{
+    padding: 1.2rem;
+    margin:1rem;
     text-align: center;
     border-top:1px solid black;
     border-bottom:1px solid black;
@@ -50,14 +55,14 @@ header{
 table {
     width: 100%;
     background-color: #fff;
+    color: #000;
     border-collapse: collapse;
-    color: #000000;
     text-align:justify;
   }
   
   table td, th {
     padding: 10px 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid gray;
   }
   
   table thead {
@@ -69,9 +74,9 @@ table {
 
 footer {
     padding: 40px 0;
-    margin-top: 20px;
     background: #333;
     color: #eee;
+    border-top:1px solid gray;
 }
 
 footer p{ 
@@ -92,4 +97,14 @@ footer .fa-heart{
     100%{
         transform: scale(1);
     }
+}
+
+
+.toggle-btn{
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: transparent;
+    color:gray;
+    box-shadow: 0 0 5px gray;
 }

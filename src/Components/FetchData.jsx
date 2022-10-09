@@ -6,6 +6,30 @@ export function FetchData() {
 
   const [data, setData] = useState([]);
 
+  const [darkmode , setDarkMode ] = useState({
+    color: "#333",
+    backgroundColor:"white"
+  })
+
+  const [btntext, setBtnText]=useState('Dark Mode')
+
+  const toggle = ()=>{
+   if(darkmode.color === '#333'){
+      setDarkMode({
+        color: "#eee",
+        backgroundColor:"#333"
+      })
+      setBtnText("Light Mode")
+   }
+   else{
+    setDarkMode({
+      color: "#333",
+      backgroundColor:"white"
+    })
+    setBtnText("Dark Mode")
+   } 
+  }
+
   useEffect(()=>{
     axios
       .get(`https://data.covid19india.org/data.json`)
@@ -16,12 +40,13 @@ export function FetchData() {
       })
   },[])
   return (
-    <div>
+    <div className='data' style={darkmode}>
+      <button className='toggle-btn' onClick={toggle}>{btntext}</button>
         <div className="data_heading">
           <h1>Dashboard | State Wise Data</h1>
         </div>
         <div className="table_data">
-            <table>
+            <table style={darkmode}>
               <thead>
                 <tr>
                   <th>State</th>
