@@ -4,7 +4,7 @@
 <h2>General Information</h2>
 <hr>
 <ul>
-<li>Live Link -#/</li>
+<li>Live Link -https://covid-tracker09.netlify.app/ </li>
 </ul>
 <h2>Technologies Used</h2>
 <hr>
