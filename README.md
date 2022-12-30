@@ -24,6 +24,7 @@
 <hr>
 <ul>
 <li>Dark/Light Mode</li>
+<li>Get Covid Data state wise across India</li>
 </ul>
 <h2>Project Status</h2>
 <hr><p>Completed</p>
