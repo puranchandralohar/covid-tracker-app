@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import "./Style.css";
+import "./style.css";
 
 export function FetchData() {
   const [data, setData] = useState([]);
