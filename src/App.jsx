@@ -1,7 +1,7 @@
 import React from "react";
-import { Header } from "./Components/Header";
-import { FetchData } from "./Components/FetchData";
-import { Footer } from "./Components/Footer";
+import { Header } from "./components/Header";
+import { FetchData } from "./components/FetchData";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (

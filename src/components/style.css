@@ -5,28 +5,51 @@
 }
 
 
-/* Header */
-header {
-    height: 400px;
-    background-image: url("https://www.microsoft.com/en-us/research/uploads/prod/2020/06/PandemicPrep_MED_header_06_2020_1920x720.jpg");
-    background-size: cover;
-
+header{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
 }
 
+header:before {
+    content: '';
+    position: absolute;
+    background: #00000080;
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+video {
+    position: inherit;
+    min-width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
 .heading {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 2.4rem;
     justify-content: center;
     flex-direction: column;
     text-transform: uppercase;
-    color: #eee;
+    color: #dddddd;
 }
 
 .title::first-letter {
     color: red;
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 .sub_title {
