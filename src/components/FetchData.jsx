@@ -67,7 +67,7 @@ export function FetchData() {
             </tr>
           </thead>
           <tbody>
-            {searchedData.filter((ele)=>ele.state.toLowerCase().includes(query))
+            {searchedData.filter((ele)=>ele.state.toLowerCase().includes(query.toLowerCase()))
             .map((item, index) => {
               return (
                 <tr>
