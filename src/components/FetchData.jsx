@@ -13,6 +13,10 @@ export function FetchData() {
 
   const [btntext, setBtnText] = useState("Dark Mode");
 
+  const [searchedData, setSearchedData] = useState([])
+
+  const [query, setQuery] = useState("");
+
   const toggle = () => {
     if (darkmode.color === "#333") {
       setDarkMode({
@@ -33,8 +37,10 @@ export function FetchData() {
     axios.get(`https://data.covid19india.org/data.json`).then((res) => {
       let db = res.data.statewise;
       setData(db);
+      setSearchedData(db)
     });
   }, []);
+
 
   return (
     <div className="data" style={darkmode}>
@@ -43,6 +49,10 @@ export function FetchData() {
       </button>
       <div className="data_heading">
         <h1>Dashboard | State Wise Data</h1>
+      </div>
+      <div className="search_area">
+        <input type="text" placeholder="Search" onChange={(e)=>setQuery(e.target.value)}/>
+        
       </div>
       <div className="table_data">
         <table style={darkmode}>
@@ -57,7 +67,8 @@ export function FetchData() {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => {
+            {searchedData.filter((ele)=>ele.state.toLowerCase().includes(query))
+            .map((item, index) => {
               return (
                 <tr>
                   <td>{item.state}</td>

@@ -69,6 +69,21 @@ video {
     border-bottom: 1px solid black;
 }
 
+.search_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.search_area input{
+    padding: 1rem 1.5rem;
+    border:1px solid #c9c9c9;
+    outline: none;
+    width: 50%;
+    border-radius: 0.2rem;
+}
+
 /* Table */
 
 .table_data {
