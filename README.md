@@ -18,12 +18,19 @@
 <li>JavaScript</li>
 </ul>
 <ul>
-<li>React</li>
+<li>React
+    <ul>
+    <li>Hooks</li>
+    <li>useState</li>
+    <li>useEffect</li>
+    </ul>
+</li>
 </ul>
 <h2>Features</h2>
 <hr>
 <ul>
 <li>Dark/Light Mode</li>
+<li>Search Specific State Data</li>
 <li>Get Covid Data state wise across India</li>
 </ul>
 <h2>Project Status</h2>
